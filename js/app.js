@@ -35,14 +35,16 @@ $(document).ready(function(){
 $('form').submit(function(event) {
      event.preventDefault();
 	   var textValue = $("#userGuess").val();
-     if (textValue ==="") {
-       alert("enter your guess in the form of a number");
+	   var x = textValue; 
+     if (textValue ==="" || textValue <= 0 || textValue > 100 || (isNaN(x))) {
+       alert("enter a number between 1-100");
      }
      else {
      
      	$("#guessList").append("<li class=\"guess-items\"><span>" + textValue + "</span></li>");
 			}
 	});
+
 
 
 	});
