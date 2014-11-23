@@ -24,7 +24,7 @@ $(document).ready(function(){
     return Math.floor(Math.random() * (100)) + 1;
 	}
 	var randomNum = newNum();
-	alert(randomNum);
+	
 
 	
 
