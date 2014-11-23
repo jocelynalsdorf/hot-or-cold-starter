@@ -76,6 +76,10 @@ function between(p, min, max) {
 
 if (p === 0) {
     document.getElementById("feedback").innerHTML = "You win!!";
+    var replay = prompt("play again? Enter yes or no");
+    if(replay === "yes") {
+    	window.location.reload();
+    }
 
  } 
 else if (between(p, 50 , 100))  {
