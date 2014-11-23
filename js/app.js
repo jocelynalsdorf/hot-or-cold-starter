@@ -2,7 +2,7 @@
 $(document).ready(function(){
 	
 	/*--- Display information modal box ---*/
-  	$(".what").click(function(){
+  	$(".what").click(function() {
     	$(".overlay").fadeIn(1000);
 
   	});
@@ -18,20 +18,32 @@ $(document).ready(function(){
 	
 
 	$(".new").on("click",function() {
-	function getNum() {
+	
+	//create function newGame() {}
+	function newNum() {
     return Math.floor(Math.random() * (100)) + 1;
 	}
-	var randomNum = getNum();
+	var randomNum = newNum();
 	alert(randomNum);
 
 	});
 
 
 
+/*--- take input from user and append to list ---*/
 
+$('form').submit(function(event) {
+     event.preventDefault();
+	   var textValue = $("#userGuess").val();
+     if (textValue ==="") {
+       alert("enter your guess in the form of a number");
+     }
+     else {
+     
+     	$("#guessList").append("<li class=\"guess-items\"><span>" + textValue + "</span></li>");
+			}
+	});
 
-
-/*--- Hide information modal box ---*/
 
 	});
 
