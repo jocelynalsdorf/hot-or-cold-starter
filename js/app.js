@@ -75,34 +75,44 @@ function between(p, min, max) {
 	  }
 
 if (p === 0) {
-     alert("You win!!");
+    document.getElementById("feedback").innerHTML = "You win!!";
 
  } 
 else if (between(p, 50 , 100))  {
-     alert("ice cold");
+     document.getElementById("feedback").innerHTML = "Ice cold!!";
 
  }
     
 else if (between(p, 30 , 49))  {
-	  alert("cool");
+	  document.getElementById("feedback").innerHTML = "cool!!";
 
  }
     
-else if (between(p, 10 , 30))  {
-     alert("warm");
+else if (between(p, 20 , 29))  {
+     document.getElementById("feedback").innerHTML = "Warm!!";
 
  } 
-  
-else  if (between(p, 1 , 29)) {
-     alert("hot");
+
+ else if (between(p, 10 , 19))  {
+     document.getElementById("feedback").innerHTML = "Warmer!!";
+
+ } 
+
+else  if (between(p, 5 , 9)) {
+    document.getElementById("feedback").innerHTML = "Hot!!";
  }
 
- else {
+ else  if (between(p, 1 , 4)) {
+    document.getElementById("feedback").innerHTML = "Super hot!!";
+ }
  
+ else { 
+    }
+
+   });
  
-}
+ });
+
 });
-});
-	});
 
 
