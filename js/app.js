@@ -32,22 +32,25 @@ $(document).ready(function(){
 
 /*--- take input from user and append to list ---*/
 
+
+var count = 0;
+
 $('form').submit(function(event) {
      event.preventDefault();
 	   var textValue = $("#userGuess").val();
 	   var x = textValue; 
- 	   var count = 0;
-            function countTries() {
+ 	    	 
+ 	   function countTries() {
             document.getElementById("count").innerHTML = ++count;
-            }
-
+           
+            } 
      if (textValue ==="" || textValue <= 0 || textValue > 100 || (isNaN(x))) {
        alert("enter a number between 1-100");
      }
      else {
-     
+     	
      	$("#guessList").append("<li class=\"guess-items\"><span>" + textValue + "</span></li>");
-			return countTries();
+		return countTries();	
 			}
               
 	});
